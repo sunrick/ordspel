@@ -9,9 +9,9 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Rickard Sunden"]
   spec.email         = ["rickard.sunden@outlook.com"]
 
-  spec.summary       = %q{TODO: Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = %q{Translates English into a foreign language.}
+  spec.description   = %q{Forget Google Translate for your language translation needs, OrdSpel is here to save the day.}
+  spec.homepage      = "https://github.com/sunrick/ordspel"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or
