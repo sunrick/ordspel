@@ -103,6 +103,8 @@ module Ordspel
     self.chars.map do |letter|
       if letter =~ /^[#{@@vowels}]$/i
           letter = letter =~ /^[#{@@vowels}]$/ ? "y" : "Y"
+      else
+        letter
       end
     end.join
   end
