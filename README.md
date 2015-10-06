@@ -1,6 +1,6 @@
 # Ordspel
 
-The world's best language translator for Ruby. The gem currently supports English to: Swedish, Spanish, Irish, "Belgian", "Swiss", French, German, Japanese, Chinese, Russian, Welsh and Dutch.
+The world's best language translator for Ruby. The gem currently supports English to: Swedish, Spanish, Irish, "Belgian", "Swiss", French, German, Japanese, Chinese, Russian, Welsh, Dutch and Portuguese.
 
 ## Installation
 
