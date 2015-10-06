@@ -88,7 +88,7 @@ module Ordspel
         when /^[#{@@letter_a}]$/i
           letter = letter =~ /^[#{@@letter_a}]$/ ? "ã" : "Ã"
         when /^[c]$/i
-          letter = letter =~ /^[#{@@letter_e}]$/ ? "ç" : "Ç"
+          letter = letter =~ /^[c]$/ ? "ç" : "Ç"
         else
           letter
       end
