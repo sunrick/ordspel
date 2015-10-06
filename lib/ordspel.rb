@@ -34,7 +34,7 @@ module Ordspel
   end
 
   def frenchify
-    self.gsub(/h/i,'').split(' ').join(' euhhh ') + " euhhh"
+    self.gsub(/\bh/i,'').split(' ').join(' euhhh ') + " euhhh"
   end
 
   def chinify
