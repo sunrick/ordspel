@@ -1,6 +1,6 @@
 # Ordspel
 
-The world's best language translator for Ruby. The gem currently supports Latin based alphabet translations for: Swedish, Danish, Norwegian, Spanish, Irish, "Belgian", "Swiss", French, German, Japanese, Chinese, Russian, Welsh, Dutch, Portuguese, "American".
+The world's best language translator for Ruby. The gem currently supports Latin based alphabet translations for: Swedish, Danish, Norwegian, Spanish, Irish, "Belgian", "Swiss", French, German, Japanese, Chinese, Russian, Welsh, Dutch, Portuguese, "American", and "Canadian".
 
 Obviously I'm rocking the stereotypes (just a bit of fun)! Would love to "support" more languages and make the gem even more "international", regional dialects could be cool for English countries. Pull requests welcome!
 
