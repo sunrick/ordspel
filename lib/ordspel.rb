@@ -110,7 +110,7 @@ module Ordspel
   end
 
   def belgify
-    ("Il y a nonante Manneken-Pis dans le magasin. (mdr) " + self.dutchify).frenchify
+     self.dutchify.frenchify
   end
 
 end
