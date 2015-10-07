@@ -59,7 +59,7 @@ Or install it yourself as:
  # => "Eating euhhh baguettes euhhh is euhhh my euhhh favorite. euhhh"
 
  "This is the best chocolate in the world".swissify
- # => "Eating euhhh baguettes euhhh is euhhh my euhhh favorite. euhhh"
+ # => "JA Zo, Zis Eühhh Is Eühhh The Eühhh Best Eühhh Chocolate Eühhh In Eühhh The Eühhh World Eühhh"
 
  "I think that the french are the worst.".germanify
  # => "JA Zo, I Zink Zat Ze French Are Ze Worst."
