@@ -74,6 +74,13 @@ module Ordspel
     string[0..1] = "Z" if string[0..1] =~ /^th$/i
     string = "JA Zo, " + string
     string.gsub(/\sth/i, ' Z')
+    string.chars.map do |letter|
+      if letter =~ /^[u]$/i
+        letter = letter =~ /^[u]$/ ? "ü" : "Ü"
+      else
+        letter
+      end
+    end.join
   end
 
   def russify
