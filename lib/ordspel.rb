@@ -17,6 +17,8 @@ module Ordspel
           letter = letter =~ /^[#{@@letter_e}]$/ ? "ä" : "Ä"
         when /^[#{@@letter_a}]$/i
           letter = letter =~ /^[#{@@letter_a}]$/ ? "å" : "Å"
+        when /^[w]$/i
+          letter = letter =~ /^[w]$/ ? "w" : "W"
         else
           letter
       end
@@ -32,6 +34,8 @@ module Ordspel
           letter = letter =~ /^[#{@@letter_e}]$/ ? "æ" : "Æ"
         when /^[#{@@letter_a}]$/i
           letter = letter =~ /^[#{@@letter_a}]$/ ? "å" : "Å"
+        when /^[w]$/i
+          letter = letter =~ /^[w]$/ ? "w" : "W"
         else
           letter
       end
@@ -138,6 +142,16 @@ module Ordspel
      self.dutchify.frenchify
   end
 
+  def americanify
+    self.split(" ").join(' like ')
+  end
+
+  def canadify
+    word_list = ["eh", "sorry", "bud", "crosby", "hockey"]
+    self.split(" ").map do |word|
+      "#{word} #{word_list.sample}"
+    end.join(' ')
+  end
 end
 
 class String
