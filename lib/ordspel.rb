@@ -70,6 +70,8 @@ module Ordspel
 
   def germanify
     string = self.split(" ").map { |word| word.capitalize }.join(' ')
+    #in case first letters of string are th
+    string[0..1] = "Z" if string[0..1] =~ /^th$/i
     string = "JA Zo, " + string
     string.gsub(/\sth/i, ' Z')
   end
