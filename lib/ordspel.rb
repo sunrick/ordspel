@@ -23,6 +23,23 @@ module Ordspel
     end.join
   end
 
+  def norwegify
+    self.chars.map do |letter|
+      case letter
+        when /^[#{@@letter_o}]$/i
+          letter = letter =~ /^[#{@@letter_o}]$/ ? "ø" : "Ø"
+        when /^[#{@@letter_e}]$/i
+          letter = letter =~ /^[#{@@letter_e}]$/ ? "æ" : "Æ"
+        when /^[#{@@letter_a}]$/i
+          letter = letter =~ /^[#{@@letter_a}]$/ ? "å" : "Å"
+        else
+          letter
+      end
+    end.join
+  end
+
+  alias_method :danify, :norwegify
+
   def spanify
     self.split(' ').map do |letter|
       if letter[-1] =~ /^[#{@@consonants}]$/
@@ -53,7 +70,6 @@ module Ordspel
 
   def germanify
     string = self.split(" ").map { |word| word.capitalize }.join(' ')
-    string[0..1] = "Z" if string[0..1] =~ /^th$/i
     string = "JA Zo, " + string
     string.gsub(/\sth/i, ' Z')
   end
