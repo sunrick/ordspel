@@ -45,11 +45,11 @@ module Ordspel
   alias_method :danify, :norwegify
 
   def spanify
-    self.split(' ').map do |letter|
-      if letter[-1] =~ /^[#{@@consonants}]$/
-        letter + "o"
+    self.split(' ').map do |word|
+      if word[-1] =~ /^[#{@@consonants}]$/
+        word + "o"
       else
-        letter
+        word
       end
     end.join(' ')
   end
@@ -77,7 +77,7 @@ module Ordspel
     #in case first letters of string are th
     string[0..1] = "Z" if string[0..1] =~ /^th$/i
     string = "JA Zo, " + string
-    string.gsub(/\sth/i, ' Z')
+    string = string.gsub(/\sth/i, ' Z')
     string.chars.map do |letter|
       if letter =~ /^[u]$/i
         letter = letter =~ /^[u]$/ ? "ü" : "Ü"
