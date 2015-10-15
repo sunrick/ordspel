@@ -4,6 +4,8 @@
 
 The world's best language translator for Ruby. The gem currently supports Latin based alphabet translations for: Swedish, Danish, Norwegian, Spanish, Irish, "Belgian", "Swiss", French, German, Japanese, Chinese, Russian, Welsh, Dutch, Portuguese, "American", and "Canadian".
 
+Started working on some regional accents: Boston.
+
 Obviously I'm rocking the stereotypes (just a bit of fun)! Would love to "support" more languages and make the gem even more "international", regional dialects could be cool for English countries. Pull requests welcome!
 
 ## Installation
@@ -26,25 +28,31 @@ Or install it yourself as:
 
 ```ruby
 
-# List of methods to call on any string.
+### List of methods to call on any string.
 
-.swedify
-.norwegify
-.danify
-.spanify
-.irishify
-.belgify
-.swissify
-.frenchify
-.germanify
-.japanify
-.chinify
-.russify
-.welshify
-.dutchify
-.portugify
-.americanify
-.canadify
+# Languages
+
+  .swedify
+  .norwegify
+  .danify
+  .spanify
+  .irishify
+  .belgify
+  .swissify
+  .frenchify
+  .germanify
+  .japanify
+  .chinify
+  .russify
+  .welshify
+  .dutchify
+  .portugify
+  .americanify
+  .canadify
+
+# Regional
+
+  .bostonify
 
 # Some examples
 
