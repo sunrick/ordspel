@@ -87,7 +87,7 @@ Or install it yourself as:
 
 ## Version History
 
-[Read about the gem history here.](history.md)
+[Read about the gem history here.](HISTORY.md)
 
 ## Pull Requests
 
