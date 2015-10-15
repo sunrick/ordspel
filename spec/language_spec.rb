@@ -1,4 +1,5 @@
 require 'spec_helper'
+require 'rspec/mocks'
 
 RSpec.describe Ordspel::Language do
 
@@ -66,6 +67,32 @@ RSpec.describe Ordspel::Language do
     string = "This is a sentence..."
     expect(string.portugify).to eq("This is ã sentenção...")
   end
-  
+
+  it 'swissify should return the right string' do
+    string = "I love chocolate."
+    expect(string.swissify).to eq("JA Zo, I Eühhh Love Eühhh Chocolate. Eühhh")
+  end
+
+  it 'welshify should return the right string' do
+    string = "I am Welsh."
+    expect(string.welshify).to eq("Y ym Wylsh.")
+  end
+
+  it 'belgify should return the right string' do
+    string = "Yes I am Belgian. Hospital."
+    expect(string.belgify).to eq("Yesh euhhh I euhhh am euhhh Belgian. euhhh oshpital. euhhh")
+  end
+
+  it 'americanify should return the right string' do
+    string = "I am American."
+    expect(string.americanify).to eq("I like am like American.")
+  end
+
+  it 'canadify should return the right string' do
+    allow_any_instance_of(Array).to receive(:sample).and_return("eh")
+
+    string = "I like maple syrup."
+    expect(string.canadify).to eq("I eh like eh maple eh syrup. eh")
+  end
   
 end
