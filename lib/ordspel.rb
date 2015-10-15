@@ -1,9 +1,12 @@
 require "ordspel/version"
+require "ordspel/regional"
+require 'pry'
 
 module Ordspel
+  module Language
 
   @@letter_o = "oóòŏôốồỗổǒöȫőõṍṏȭȯȱøǿǫǭōṓ̂ṑỏȍȏơớờỡởợọộɵｏꜵœꝏꝍȣ"
-  @@letter_a = "aáàâǎăãảȧạåḁāąⱥȁấầẫẩậắằẵẳặǻǡǟȁȃɑɐａǽǣꜳꜵꜷꜹꜻ"
+  @@letter_a = "aáàâǎăãảȧạåḁāąⱥȁấầẫẩậắằẵẳặǻǡǟȃɑɐａǽǣꜳꜵꜷꜹꜻ"
   @@letter_e = "eéèêḙěĕẽḛẻėëēȩęɇȅếềễểḝḗḕȇẹệｅæǽǣœ"
   @@consonants = "bcdfghjklmnpqrstvxz"
   @@vowels = "aeiouy"
@@ -17,8 +20,8 @@ module Ordspel
           letter = letter =~ /^[#{@@letter_e}]$/ ? "ä" : "Ä"
         when /^[#{@@letter_a}]$/i
           letter = letter =~ /^[#{@@letter_a}]$/ ? "å" : "Å"
-        when /^[w]$/i
-          letter = letter =~ /^[w]$/ ? "w" : "W"
+        when /^w$/i
+          letter = letter =~ /^w$/ ? "w" : "W"
         else
           letter
       end
@@ -34,8 +37,8 @@ module Ordspel
           letter = letter =~ /^[#{@@letter_e}]$/ ? "æ" : "Æ"
         when /^[#{@@letter_a}]$/i
           letter = letter =~ /^[#{@@letter_a}]$/ ? "å" : "Å"
-        when /^[w]$/i
-          letter = letter =~ /^[w]$/ ? "w" : "W"
+        when /^w$/i
+          letter = letter =~ /^w$/ ? "w" : "W"
         else
           letter
       end
@@ -48,6 +51,17 @@ module Ordspel
     self.split(' ').map do |word|
       if word[-1] =~ /^[#{@@consonants}]$/
         word + "o"
+      elsif word[-1] =~ /^\W$/
+        rev_word = word.reverse
+        consonant = rev_word.chars.detect do |letter|
+          letter =~ /^[#{@@consonants}]$/
+        end
+        if consonant
+          index = rev_word.index(consonant)
+          rev_word[index] = 'o' + rev_word[index]
+          word = rev_word.reverse
+        end
+        word
       else
         word
       end
@@ -153,9 +167,11 @@ module Ordspel
     end.join(' ')
   end
 end
+end
 
 class String
-  include Ordspel
+  include Ordspel::Language
+  include Ordspel::Regional
 end
 
 
