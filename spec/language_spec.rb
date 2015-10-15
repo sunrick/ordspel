@@ -1,5 +1,4 @@
 require 'spec_helper'
-require 'rspec/mocks'
 
 RSpec.describe Ordspel::Language do
 
