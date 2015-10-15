@@ -85,6 +85,10 @@ Or install it yourself as:
 
 ```
 
+## Version History
+
+[Read about the gem history here.](history.md)
+
 ## Pull Requests
 
 Would love to have pull requests come my way! Let's make the world even more global.
