@@ -1,6 +1,7 @@
 # Ordspel
 
 [![Gem Version](https://badge.fury.io/rb/ordspel.svg)](https://badge.fury.io/rb/ordspel)
+[![Build Status](https://travis-ci.org/sunrick/ordspel.svg?branch=master)](https://travis-ci.org/sunrick/ordspel)
 
 The world's best language translator for Ruby. The gem currently supports Latin based alphabet translations for: Swedish, Danish, Norwegian, Spanish, Irish, "Belgian", "Swiss", French, German, Japanese, Chinese, Russian, Welsh, Dutch, Portuguese, "American", and "Canadian".
 
