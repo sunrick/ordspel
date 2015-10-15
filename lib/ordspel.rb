@@ -1,6 +1,5 @@
 require "ordspel/version"
 require "ordspel/regional"
-require 'pry'
 
 module Ordspel
   module Language
