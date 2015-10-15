@@ -1,4 +1,5 @@
 require "ordspel/version"
+require "ordspel/constants"
 require "ordspel/language"
 require "ordspel/regional"
 
