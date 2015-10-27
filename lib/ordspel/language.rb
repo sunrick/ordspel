@@ -1,11 +1,6 @@
 module Ordspel
   module Language
-
-    @@letter_o = "oóòŏôốồỗổǒöȫőõṍṏȭȯȱøǿǫǭōṓ̂ṑỏȍȏơớờỡởợọộɵｏꜵœꝏꝍȣ"
-    @@letter_a = "aáàâǎăãảȧạåḁāąⱥȁấầẫẩậắằẵẳặǻǡǟȃɑɐａǽǣꜳꜵꜷꜹꜻ"
-    @@letter_e = "eéèêḙěĕẽḛẻėëēȩęɇȅếềễểḝḗḕȇẹệｅæǽǣœ"
-    @@consonants = "bcdfghjklmnpqrstvxz"
-    @@vowels = "aeiouy"
+    include Ordspel::Constants
 
     def swedify
       self.chars.map do |letter|
