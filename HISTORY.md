@@ -1,3 +1,7 @@
+### 0.1.3 (2015-28-15)
+
+* Added a minnesotafy method.
+
 ### 0.1.2 (2015-10-15)
 
 * Added unit tests for all methods. Fixed spanify bug where 'o' was not added to the end of the word if the last character was a consonant followed by a non word character.
